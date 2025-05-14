@@ -795,61 +795,54 @@ footer {
     }
 }
 
+/* Responsividade para telas menores (celulares) */
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav#nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        padding: 10px;
+        box-shadow: var(--shadow);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    nav#nav.active ul {
+        display: flex;
+    }
+
     #btn-mobile {
         display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
     }
-    
-    #nav {
-        position: absolute;
-        top: 90px;
-        right: 20px;
-        background: var(--white);
-        width: calc(100% - 40px);
-        max-width: 300px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow-hover);
-        padding: 20px;
-        transition: var(--transition);
-        opacity: 0;
-        pointer-events: none;
+
+    .hero-content {
+        text-align: center;
     }
-    
-    #nav.active {
-        opacity: 1;
-        pointer-events: all;
-        top: 80px;
+
+    .sobre-content {
+        flex-direction: column;
+        gap: 20px;
     }
-    
-    #nav ul {
+
+    .qualificacoes {
+        flex-direction: column;
+    }
+
+    .hero-buttons {
         flex-direction: column;
         gap: 15px;
     }
-    
-    #nav ul li a {
-        padding: 10px 0;
-        display: block;
-    }
-    
-    .hero {
-        height: auto;
-        min-height: 700px;
-        padding-bottom: 80px;
-        background-size: cover;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .hero-subtitle {
-        margin-bottom: 10vh;
-    }
-    
-    .hero-buttons {
-        bottom: -20px;
-    }
-    
     .section-title h2 {
         font-size: 2rem;
     }
