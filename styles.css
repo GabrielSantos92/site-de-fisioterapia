@@ -794,7 +794,7 @@ footer {
         font-size: 24px;
         cursor: pointer;
         position: absolute; /* Posiciona o botão absolutamente */
-        top: 15px; /* Ajusta a posição vertical */
+        top: 30px; /* Ajusta a posição vertical */
         right: 20px; /* Posiciona o botão à direita */
     }
 
