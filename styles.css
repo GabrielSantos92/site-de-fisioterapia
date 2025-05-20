@@ -859,6 +859,10 @@ footer {
         background-color: var(--primary-light);
         color: var(--white);
     }
+
+     .logo {
+        top: 4px; /* Move a logo para cima em telas menores */
+    }
 }
 
 @media (max-width: 576px) {
