@@ -188,8 +188,8 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between; /* Alinha elementos à esquerda e à direita */
     padding: 15px 20px;
 }
 
@@ -205,6 +205,7 @@ header {
 }
 
 /* Menu Desktop */
+
 #nav ul {
     display: flex;
     align-items: center;
@@ -774,23 +775,27 @@ footer {
         flex-direction: column;
         background-color: var(--white);
         width: 100%;
-        padding: 10px;
+        padding: 20px;
         box-shadow: var(--shadow);
         position: absolute;
         top: 60px;
         left: 0;
+        z-index: 999;
     }
 
     nav#nav.active ul {
         display: flex;
     }
 
-    #btn-mobile {
-        display: block;
+       #btn-mobile {
+        display: block; /* Mostra o botão em telas menores */
         background: none;
         border: none;
         font-size: 24px;
         cursor: pointer;
+        position: absolute; /* Posiciona o botão absolutamente */
+        top: 15px; /* Ajusta a posição vertical */
+        right: 20px; /* Posiciona o botão à direita */
     }
 
     .sobre-content {
@@ -835,6 +840,24 @@ footer {
     .intro-buttons {
         flex-direction: column;
         gap: 15px;
+    }
+
+    #nav ul li {
+        margin-bottom: 15px; /* Espaçamento entre os itens do menu */
+    }
+
+    #nav ul li a {
+        color: var(--text-color);
+        font-size: 1rem;
+        text-align: center;
+        padding: 10px;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+    }
+
+    #nav ul li a:hover {
+        background-color: var(--primary-light);
+        color: var(--white);
     }
 }
 

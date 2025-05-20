@@ -1,63 +1,65 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Header scroll effect
     const header = document.getElementById('header');
-    
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            header.classList.add('header-scrolled');
-        } else {
-            header.classList.remove('header-scrolled');
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+    }
 
     // Mobile menu toggle
     const btnMobile = document.getElementById('btn-mobile');
     const nav = document.getElementById('nav');
-    
-    function toggleMenu() {
-        nav.classList.toggle('active');
-        const isActive = nav.classList.contains('active');
-        btnMobile.setAttribute('aria-expanded', isActive);
-    }
-    
-    btnMobile.addEventListener('click', toggleMenu);
+    if (btnMobile && nav) {
+        function toggleMenu() {
+            nav.classList.toggle('active'); // Alterna a classe 'active'
+            const isActive = nav.classList.contains('active');
+            btnMobile.setAttribute('aria-expanded', isActive); // Atualiza acessibilidade
+        }
 
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('#nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (nav.classList.contains('active')) {
-                toggleMenu();
-            }
+        btnMobile.addEventListener('click', toggleMenu);
+
+        // Fechar o menu quando um link for clicado
+        const navLinks = document.querySelectorAll('#nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (nav.classList.contains('active')) {
+                    toggleMenu(); // Fecha o menu após clicar em um link
+                }
+            });
         });
-    });
+    }
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 window.scrollTo({
                     top: targetElement.offsetTop - 90,
-                    behavior: 'smooth'
+                    behavior: 'smooth',
                 });
             }
         });
     });
 
     // Animate elements when scrolling
-    const animateOnScroll = function() {
+    const animateOnScroll = function () {
         const elements = document.querySelectorAll('.servico-card, .qualificacao-item, .beneficio-item, .contato-form, .contato-info');
-        
+
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
-            
+
             if (elementPosition < windowHeight - 100) {
                 element.style.opacity = '1';
                 element.style.transform = 'translateY(0)';
@@ -79,11 +81,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form submission
     const form = document.getElementById('form-contato');
     if (form) {
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             e.preventDefault();
-            
-            // Here you would typically send the form data to a server
-            // For now, we'll just show an alert
+
+            // Simulação de envio de formulário
             alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
             form.reset();
         });
