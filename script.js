@@ -35,22 +35,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
 
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 90,
-                    behavior: 'smooth',
-                });
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            let offsetAdjustment = 80; // Valor padrão para outras seções
+
+            // Verifica se a seção de destino é "Contato"
+            if (targetId === '#contato') {
+                offsetAdjustment = 125; // Ajuste maior para a seção Contato
             }
-        });
+
+            window.scrollTo({
+                top: targetElement.offsetTop - offsetAdjustment,
+                behavior: 'smooth',
+            });
+        }
     });
+});
 
     // Animate elements when scrolling
     const animateOnScroll = function () {
