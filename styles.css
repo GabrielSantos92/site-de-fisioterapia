@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Larianti';
+    src: url('fonts/larianti.otf') format('opentype');
+}
+
 :root {
     --primary-color: #0D1C43;
     --primary-light: #2c3e73;
@@ -309,11 +314,11 @@ header {
 }
 
 .intro-text h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-family: 'Larianti', sans-serif;
     margin-bottom: 20px;
     color: var(--primary-color);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.99;
 }
 
 .intro-text p.intro-subtitle {
@@ -434,7 +439,8 @@ header {
 }
 
 .servico-card {
-    background-color: var(--white);
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 30px;
     border-radius: var(--border-radius);
     text-align: center;
@@ -456,13 +462,13 @@ header {
 .servico-icon {
     width: 80px;
     height: 80px;
-    background-color: var(--primary-light);
+    background-color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
-    color: var(--white);
+    color: var(--primary-color);
     font-size: 1.8rem;
     transition: var(--transition);
 }
@@ -471,6 +477,10 @@ header {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.servico-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
 
 .servico-card:hover .servico-icon {
     transform: rotate(15deg) scale(1.1);
@@ -479,10 +489,11 @@ header {
 .servico-card h3 {
     margin-bottom: 15px;
     font-size: 1.3rem;
+    color: var(--white);
 }
 
 .servico-card p {
-    color: var(--light-text);
+    color: var(--white);
 }
 
 .section-dark .servico-card p {
