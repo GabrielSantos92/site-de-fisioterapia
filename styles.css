@@ -200,6 +200,7 @@ header {
 
 .logo {
     height: 70px;
+    border-radius: 15px;
     transition: var(--transition);
     position: relative;
     top: 20px
