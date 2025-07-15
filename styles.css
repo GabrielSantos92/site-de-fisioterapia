@@ -316,10 +316,17 @@ header {
 
 .intro-text h1 {
     font-family: 'Larianti', sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: var(--primary-color);
     font-weight: 700;
     line-height: 1.99;
+}
+
+.intro-text h2 {
+   font-size: clamp(rem, 2.5vw, 1.25rem); 
+   color: var(--light-text);
+   text-align: center;
+   transform: translateX(-65px);
 }
 
 .intro-text p.intro-subtitle {
