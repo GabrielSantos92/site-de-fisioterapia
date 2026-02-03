@@ -330,7 +330,7 @@ header .container {
 }
 
 .intro-text h2 {
-   font-size: clamp(rem, 2.5vw, 1.25rem); 
+   font-size: clamp(1rem, 2.5vw, 1.25rem);
    color: var(--light-text);
    text-align: center;
    transform: translateX(-65px);
@@ -935,20 +935,12 @@ footer {
         gap: 30px;
     }
 
-    .intro-text h1 {
-        font-size: 2rem;
-    }
-
     .intro-text h2 {
         text-align: left;
         transform: none;
         white-space: normal;
         overflow-wrap: break-word;
         word-break: break-word;
-    }
-
-    .intro-text p.intro-subtitle {
-        font-size: 1rem;
     }
 
     .intro-buttons {
