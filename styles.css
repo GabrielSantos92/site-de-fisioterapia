@@ -340,7 +340,7 @@ header .container {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: var(--light-text);
     margin-bottom: 30px;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .intro-buttons {
@@ -941,6 +941,10 @@ footer {
 
     .intro-text h2 {
         text-align: left;
+        transform: none;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
     .intro-text p.intro-subtitle {
