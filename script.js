@@ -1,195 +1,192 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // ===== Header scroll effect =====
-    const header = document.getElementById('header');
-    if (header) {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
-            }
-        });
-    }
+// ===== Configuração de contato (fonte única) =====
+// Número no formato internacional, apenas dígitos: 55 + DDD + número.
+const WHATSAPP_NUMBER = '5521976952733';
+const WHATSAPP_DEFAULT_MSG = 'Olá, Bruna! Vim pelo site e gostaria de agendar uma avaliação.';
 
-    // ===== Mobile menu toggle =====
+function whatsappUrl(message) {
+    return 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(message);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Links de WhatsApp com mensagem pré-preenchida.
+    // data-wa="" usa a mensagem padrão; data-wa="texto" acrescenta um complemento.
+    document.querySelectorAll('[data-wa]').forEach(function (link) {
+        const extra = link.getAttribute('data-wa');
+        link.href = whatsappUrl(extra ? WHATSAPP_DEFAULT_MSG + ' ' + extra : WHATSAPP_DEFAULT_MSG);
+    });
+
+    // Header: sombra ao rolar
+    const header = document.getElementById('header');
+    const waFloat = document.getElementById('wa-float');
+    const hero = document.getElementById('inicio');
+
+    function onScroll() {
+        const y = window.scrollY;
+        if (header) header.classList.toggle('is-scrolled', y > 8);
+        // Botão flutuante aparece depois do hero (onde já existe o CTA principal)
+        if (waFloat) {
+            const threshold = hero ? hero.offsetHeight * 0.6 : 400;
+            waFloat.classList.toggle('is-visible', y > threshold && !document.body.classList.contains('menu-open'));
+        }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Menu mobile
     const btnMobile = document.getElementById('btn-mobile');
     const nav = document.getElementById('nav');
+
     if (btnMobile && nav) {
-        function toggleMenu() {
-            nav.classList.toggle('active');
-            const isActive = nav.classList.contains('active');
-            btnMobile.setAttribute('aria-expanded', isActive);
-            document.body.style.overflow = isActive ? 'hidden' : 'auto';
+        const desktopQuery = window.matchMedia('(min-width: 1120px)');
+
+        function setMenu(open) {
+            nav.classList.toggle('is-open', open);
+            document.body.classList.toggle('menu-open', open);
+            btnMobile.setAttribute('aria-expanded', String(open));
+            btnMobile.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+            if (open) {
+                const first = nav.querySelector('a');
+                if (first) first.focus();
+            }
+            onScroll();
         }
 
-        btnMobile.addEventListener('click', toggleMenu);
+        function isOpen() {
+            return nav.classList.contains('is-open');
+        }
 
-        // Close menu when a link is clicked
-        const navLinks = document.querySelectorAll('#nav ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (nav.classList.contains('active')) {
-                    toggleMenu();
-                }
+        btnMobile.addEventListener('click', function () {
+            setMenu(!isOpen());
+        });
+
+        // Fecha ao clicar em um link
+        nav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                if (isOpen()) setMenu(false);
             });
         });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!nav.contains(e.target) && !btnMobile.contains(e.target) && nav.classList.contains('active')) {
-                toggleMenu();
+        // Fecha com Esc e devolve o foco ao botão
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && isOpen()) {
+                setMenu(false);
+                btnMobile.focus();
             }
+        });
+
+        // Fecha ao clicar fora
+        document.addEventListener('click', function (e) {
+            if (isOpen() && !nav.contains(e.target) && !btnMobile.contains(e.target)) {
+                setMenu(false);
+            }
+        });
+
+        // Ao mudar para desktop, garante estado fechado
+        desktopQuery.addEventListener('change', function () {
+            if (isOpen()) setMenu(false);
         });
     }
 
-    // ===== Smooth scrolling for anchor links =====
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    // Destaca no menu a seção visível
+    const navLinks = document.querySelectorAll('.nav-list a[href^="#"]');
+    if ('IntersectionObserver' in window && navLinks.length) {
+        const byId = {};
+        navLinks.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
 
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+        const sectionObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(function (a) { a.removeAttribute('aria-current'); });
+                const link = byId[entry.target.id];
+                if (link) link.setAttribute('aria-current', 'true');
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
 
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                let offsetAdjustment = 80;
+        Object.keys(byId).forEach(function (id) {
+            const section = document.getElementById(id);
+            if (section) sectionObserver.observe(section);
+        });
+    }
 
-                if (targetId === '#contato') {
-                    offsetAdjustment = 125;
+    // Animação de entrada suave
+    const revealEls = document.querySelectorAll('.reveal');
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    } else {
+        const revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
                 }
+            });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
 
-                window.scrollTo({
-                    top: targetElement.offsetTop - offsetAdjustment,
-                    behavior: 'smooth',
-                });
-            }
+        revealEls.forEach(function (el) {
+            // pequeno atraso escalonado entre itens irmãos
+            const index = Array.prototype.indexOf.call(el.parentElement.children, el);
+            el.style.transitionDelay = Math.min(index, 5) * 70 + 'ms';
+            revealObserver.observe(el);
         });
-    });
+    }
 
-    // ===== Animate elements when scrolling =====
-    const animateOnScroll = function () {
-        const elements = document.querySelectorAll(
-            '.servico-card, .qualificacao-item, .beneficio-item, .contato-form, .contato-info, .sobre-img, .sobre-texto, .depoimento-card, .blog-card'
-        );
-
-        elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            if (elementPosition < windowHeight - 100) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
-    };
-
-    // Set initial state for animated elements
-    const animatedElements = document.querySelectorAll(
-        '.servico-card, .qualificacao-item, .beneficio-item, .contato-form, .contato-info, .sobre-img, .sobre-texto, .depoimento-card, .blog-card'
-    );
-    animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    });
-
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll();
-
-    // ===== Form submission =====
+    // Formulário: monta a mensagem e abre o WhatsApp.
+    // Nenhum dado é enviado a servidores ou armazenado pelo site.
     const form = document.getElementById('form-contato');
     if (form) {
+        const nome = form.querySelector('#nome');
+        const nomeErro = form.querySelector('#nome-erro');
+        const status = document.getElementById('form-status');
+
+        function showNameError(show) {
+            nome.setAttribute('aria-invalid', show ? 'true' : 'false');
+            nomeErro.hidden = !show;
+        }
+
+        nome.addEventListener('input', function () {
+            if (nome.value.trim()) showNameError(false);
+        });
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
-            const nome = document.getElementById('nome').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const telefone = document.getElementById('telefone').value.trim();
-            const mensagem = document.getElementById('mensagem').value.trim();
-
-            // Basic validation
-            if (!nome || !email || !mensagem) {
-                alert('Por favor, preencha todos os campos obrigatórios.');
+            const name = nome.value.trim();
+            if (!name) {
+                showNameError(true);
+                nome.focus();
                 return;
             }
+            showNameError(false);
 
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Por favor, insira um e-mail válido.');
-                return;
+            const interesse = form.querySelector('#interesse').value;
+            const periodo = form.querySelector('#periodo').value;
+            const mensagem = form.querySelector('#mensagem').value.trim();
+
+            const lines = ['Olá, Bruna! Meu nome é ' + name + '. Vim pelo site e gostaria de agendar uma avaliação.'];
+            if (interesse) lines.push('Interesse: ' + interesse);
+            if (periodo) lines.push('Melhor período: ' + periodo);
+            if (mensagem) lines.push('', mensagem);
+
+            const url = whatsappUrl(lines.join('\n'));
+            // Sem 'noopener' nos parâmetros: com ele o navegador sempre retorna null
+            const win = window.open(url, '_blank');
+            if (win) {
+                win.opener = null;
+            } else {
+                window.location.href = url; // pop-up bloqueado
             }
 
-            // Success message
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            form.reset();
+            if (status) {
+                status.textContent = 'Abrimos o WhatsApp com a sua mensagem. Agora é só tocar em enviar por lá.';
+            }
         });
     }
 
-    // ===== Update current year in footer =====
+    // Ano atual no rodapé
     const currentYear = document.getElementById('current-year');
     if (currentYear) {
         currentYear.textContent = new Date().getFullYear();
     }
-
-    // ===== Add smooth scroll to top button =====
-    const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    scrollToTopBtn.className = 'scroll-to-top';
-    scrollToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 100px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        background-color: #0D1C43;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 9998;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    `;
-
-    document.body.appendChild(scrollToTopBtn);
-
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollToTopBtn.style.display = 'flex';
-        } else {
-            scrollToTopBtn.style.display = 'none';
-        }
-    });
-
-    scrollToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    scrollToTopBtn.addEventListener('mouseenter', () => {
-        scrollToTopBtn.style.backgroundColor = '#2c3e73';
-        scrollToTopBtn.style.transform = 'scale(1.1)';
-    });
-
-    scrollToTopBtn.addEventListener('mouseleave', () => {
-        scrollToTopBtn.style.backgroundColor = '#0D1C43';
-        scrollToTopBtn.style.transform = 'scale(1)';
-    });
-
-    // ===== Add loading state to buttons =====
-    const buttons = document.querySelectorAll('.btn-primary, .btn-secondary, .btn-whatsapp');
-    buttons.forEach(button => {
-        button.addEventListener('mousedown', function() {
-            this.style.transform = 'scale(0.98)';
-        });
-        button.addEventListener('mouseup', function() {
-            this.style.transform = '';
-        });
-    });
 });
