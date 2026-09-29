@@ -2,260 +2,693 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Bruna Baptista | Fisioterapia Pélvica</title>
-    <meta name="description" content="Clínica de fisioterapia pélvica especializada em saúde da mulher, reabilitação pós-parto e bem-estar. Agende sua consulta e recupere sua qualidade de vida.">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Bruna Baptista | Fisioterapia Pélvica e Saúde da Mulher em Juiz de Fora – MG</title>
+    <meta name="description" content="Fisioterapia pélvica com atendimento individualizado para incontinência urinária, recuperação pós-parto, prolapso e disfunções sexuais. Atendimento em Juiz de Fora – MG, com opção domiciliar. Agende sua avaliação.">
+    <meta name="author" content="Bruna Baptista">
+    <meta name="theme-color" content="#0D1C43">
+
+    <link rel="canonical" href="https://brunabaptista.com.br/">
+
+    <!-- Open Graph / compartilhamento -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brunabaptista.com.br/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Bruna Baptista – Fisioterapia Pélvica">
+    <meta property="og:title" content="Bruna Baptista | Fisioterapia Pélvica em Juiz de Fora – MG">
+    <meta property="og:description" content="Atendimento individualizado para incontinência urinária, pós-parto, prolapso e disfunções sexuais. Opção de atendimento domiciliar.">
+    <meta property="og:image" content="https://brunabaptista.com.br/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo Bruna Baptista Fisioterapia Pélvica ao lado de foto da fisioterapeuta">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Ícones -->
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/larianti.woff" as="font" type="font/woff" crossorigin>
+
+    <link rel="stylesheet" href="styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+
+    <!-- Dados estruturados (Schema.org) — somente informações confirmadas.
+         PREENCHER quando disponível: "address.streetAddress", "address.postalCode", "geo". -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Physiotherapy",
+        "name": "Bruna Baptista – Fisioterapia Pélvica",
+        "url": "https://brunabaptista.com.br/",
+        "description": "Fisioterapia pélvica e saúde da mulher com atendimento individualizado e opção de atendimento domiciliar em Juiz de Fora – MG.",
+        "image": "https://brunabaptista.com.br/img/og-image.jpg",
+        "logo": "https://brunabaptista.com.br/img/icon-512.png",
+        "telephone": "+55-21-97695-2733",
+        "email": "brubaptistafam@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Juiz de Fora",
+            "addressRegion": "MG",
+            "addressCountry": "BR"
+        },
+        "areaServed": { "@type": "City", "name": "Juiz de Fora" },
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        }],
+        "sameAs": ["https://www.instagram.com/brubaptista.fisio"],
+        "employee": {
+            "@type": "Person",
+            "name": "Bruna Baptista",
+            "jobTitle": "Fisioterapeuta",
+            "identifier": "CREFITO 400581-F",
+            "alumniOf": "Faculdade de Ciências Médicas e da Saúde – Suprema (Juiz de Fora)"
+        },
+        "availableService": [
+            { "@type": "MedicalTherapy", "name": "Fisioterapia Pélvica" },
+            { "@type": "MedicalTherapy", "name": "Saúde da Mulher" },
+            { "@type": "MedicalTherapy", "name": "Pilates Clínico" },
+            { "@type": "MedicalTherapy", "name": "Atendimento Domiciliar" }
+        ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <img src="logoPequenaAzul.png" alt="Imagem de um útero " class="logo">
-            <nav id="nav">
-                <ul>
+    <!-- Ícones: Lucide (ISC) e Simple Icons (CC0) -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-accessibility" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="4" r="1"/> <path d="m18 19 1-7-6 1"/> <path d="m5 8 3-3 5.5 3-2.36 3.5"/> <path d="M4.24 14.5a5 5 0 0 0 6.88 6"/> <path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></g></symbol>
+        <symbol id="i-activity" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></g></symbol>
+        <symbol id="i-arrow-down" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/> <path d="m19 12-7 7-7-7"/></g></symbol>
+        <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></g></symbol>
+        <symbol id="i-award" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/> <circle cx="12" cy="8" r="6"/></g></symbol>
+        <symbol id="i-baby" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01"/> <path d="M15 12h.01"/> <path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/> <path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></g></symbol>
+        <symbol id="i-calendar-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/> <path d="M16 2v4"/> <rect width="18" height="18" x="3" y="4" rx="2"/> <path d="M3 10h18"/> <path d="m9 16 2 2 4-4"/></g></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></g></symbol>
+        <symbol id="i-chevron-down" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></g></symbol>
+        <symbol id="i-clipboard-list" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/> <path d="M12 11h4"/> <path d="M12 16h4"/> <path d="M8 11h.01"/> <path d="M8 16h.01"/></g></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/> <polyline points="12 6 12 12 16 14"/></g></symbol>
+        <symbol id="i-droplets" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/> <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></g></symbol>
+        <symbol id="i-flower-2" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"/> <circle cx="12" cy="8" r="2"/> <path d="M12 10v12"/> <path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"/> <path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"/></g></symbol>
+        <symbol id="i-graduation-cap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/> <path d="M22 10v6"/> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></g></symbol>
+        <symbol id="i-hand-heart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/> <path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/> <path d="m2 15 6 6"/> <path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"/></g></symbol>
+        <symbol id="i-heart-pulse" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/> <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></g></symbol>
+        <symbol id="i-heart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></g></symbol>
+        <symbol id="i-house" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/> <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></g></symbol>
+        <symbol id="i-map-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/> <circle cx="12" cy="10" r="3"/></g></symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/> <line x1="4" x2="20" y1="6" y2="6"/> <line x1="4" x2="20" y1="18" y2="18"/></g></symbol>
+        <symbol id="i-message-circle-heart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/> <path d="M15.8 9.2a2.5 2.5 0 0 0-3.5 0l-.3.4-.35-.3a2.42 2.42 0 1 0-3.2 3.6l3.6 3.5 3.6-3.5c1.2-1.2 1.1-2.7.2-3.7"/></g></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></g></symbol>
+        <symbol id="i-refresh-cw" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/> <path d="M21 3v5h-5"/> <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/> <path d="M8 16H3v5"/></g></symbol>
+        <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/> <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/> <circle cx="18" cy="5" r="3"/></g></symbol>
+        <symbol id="i-shield-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/> <path d="m9 12 2 2 4-4"/></g></symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="currentColor"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></g></symbol>
+        <symbol id="i-whatsapp" viewBox="0 0 24 24"><g fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></g></symbol>
+        <symbol id="i-sparkles" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/> <path d="M20 3v4"/> <path d="M22 5h-4"/> <path d="M4 17v2"/> <path d="M5 18H3"/></g></symbol>
+        <symbol id="i-user-round" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/> <path d="M20 21a8 8 0 0 0-16 0"/></g></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/> <path d="m6 6 12 12"/></g></symbol>
+    </svg>
+
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" id="header">
+        <div class="container header-inner">
+            <a href="#inicio" class="brand">
+                <picture>
+                    <source type="image/webp" srcset="img/logo-horizontal-azul.webp">
+                    <img src="img/logo-horizontal-azul.png" alt="Bruna Baptista – Fisioterapia Pélvica" class="brand-logo" width="389" height="96">
+                </picture>
+            </a>
+
+            <nav class="site-nav" id="nav" aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="#como-ajudo">Como ajudo</a></li>
+                    <li><a href="#tratamentos">Tratamentos</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#como-funciona">Como funciona</a></li>
+                    <li><a href="#duvidas">Dúvidas</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
+                <a href="https://wa.me/5521976952733" class="btn btn-primary nav-cta" data-wa target="_blank" rel="noopener">
+                    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                    Agendar avaliação
+                </a>
             </nav>
-            <button id="btn-mobile" aria-label="Abrir Menu">
-                <span id="hamburger"></span>
-            </button>
+
+            <div class="header-actions">
+                <a href="https://wa.me/5521976952733" class="btn btn-primary btn-sm header-cta" data-wa target="_blank" rel="noopener">
+                    Agendar<span class="hide-xs">&nbsp;avaliação</span>
+                </a>
+                <button class="menu-toggle" id="btn-mobile" type="button" aria-controls="nav" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="menu-toggle-bars" aria-hidden="true"></span>
+                </button>
+            </div>
         </div>
     </header>
 
-<!-- Introdução -->
-<section id="introducao" class="section-light">
-    <div class="container">
-        <div class="intro-content">
-            <!-- Texto da Introdução -->
-            <div class="intro-text">
-                <h1>Bruna Baptista</h1>
-                <h2>Fisioterapeuta</h2>
-                <p class="intro-subtitle">
-                 Especialista em saúde da mulher, reabilitação pós-parto e bem-estar. Agende sua consulta e recupere sua qualidade de vida.
+    <main id="conteudo">
+
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <p class="eyebrow">Fisioterapia pélvica · <span class="nowrap">Juiz de Fora – MG</span></p>
+                    <h1 id="hero-title">Cuidado especializado para a saúde pélvica da mulher, <em>em cada fase da vida.</em></h1>
+                    <p class="hero-lead">
+                        Atendimento individualizado e acolhedor para incontinência urinária, recuperação pós-parto,
+                        prolapso e disfunções sexuais, com opção de atendimento domiciliar.
+                    </p>
+                    <div class="btn-group">
+                        <a href="https://wa.me/5521976952733" class="btn btn-primary btn-lg" data-wa target="_blank" rel="noopener">
+                            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                            Agendar avaliação
+                        </a>
+                        <a href="#como-ajudo" class="btn btn-ghost btn-lg">
+                            Ver como posso ajudar
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+                        </a>
+                    </div>
+                    <p class="hero-note">
+                        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+                        Segunda a sexta, das 8h às 18h
+                    </p>
+                </div>
+
+                <figure class="hero-media">
+                    <div class="hero-photo">
+                        <picture>
+                            <source type="image/webp" srcset="img/bruna-baptista-480.webp 480w, img/bruna-baptista-800.webp 800w" sizes="(min-width: 480px) 400px, calc(100vw - 40px)">
+                            <img src="img/bruna-baptista-800.jpg" srcset="img/bruna-baptista-480.jpg 480w, img/bruna-baptista-800.jpg 800w" sizes="(min-width: 480px) 400px, calc(100vw - 40px)"
+                                 alt="Bruna Baptista, fisioterapeuta, sorrindo e usando jaleco branco" width="800" height="801" fetchpriority="high">
+                        </picture>
+                    </div>
+                    <figcaption class="hero-badge">
+                        <span class="hero-badge-name">Bruna Baptista</span>
+                        <span class="hero-badge-meta">Fisioterapeuta · CREFITO 400581-F</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ========== INDICADORES DE CONFIANÇA ========== -->
+        <section class="trust" aria-label="Formação e credenciais">
+            <div class="container">
+                <ul class="trust-list">
+                    <li class="trust-item">
+                        <svg class="icon" aria-hidden="true"><use href="#i-graduation-cap"/></svg>
+                        <span><strong>Formada pela Suprema</strong> Faculdade de Ciências Médicas e da Saúde, Juiz de Fora</span>
+                    </li>
+                    <li class="trust-item">
+                        <svg class="icon" aria-hidden="true"><use href="#i-award"/></svg>
+                        <span><strong>Pós-graduada</strong> em Uroginecologia e Obstetrícia</span>
+                    </li>
+                    <li class="trust-item">
+                        <svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg>
+                        <span><strong>Registro profissional</strong> CREFITO 400581-F</span>
+                    </li>
+                    <li class="trust-item">
+                        <svg class="icon" aria-hidden="true"><use href="#i-house"/></svg>
+                        <span><strong>Atendimento individualizado</strong> inclusive no conforto da sua casa</span>
+                    </li>
+                    <!-- PREENCHER (opcional): anos de experiência, cursos e especializações adicionais -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== PROBLEMAS / NECESSIDADES ========== -->
+        <section class="section" id="como-ajudo" aria-labelledby="como-ajudo-title">
+            <div class="container">
+                <header class="section-head">
+                    <p class="eyebrow">Como posso ajudar</p>
+                    <h2 id="como-ajudo-title" class="section-title">Você se identifica com alguma dessas situações?</h2>
+                    <p class="section-lead">
+                        Muitas mulheres convivem com esses sintomas por anos, achando que fazem parte da vida.
+                        Eles merecem atenção, e conversar sobre isso é o primeiro passo.
+                    </p>
+                </header>
+
+                <ul class="condition-grid">
+                    <li class="condition reveal">
+                        <span class="condition-icon"><svg class="icon" aria-hidden="true"><use href="#i-droplets"/></svg></span>
+                        <h3>Perda de urina</h3>
+                        <p>Escapes ao tossir, espirrar, rir, pegar peso ou fazer exercício, ou vontade urgente de ir ao banheiro.</p>
+                        <a href="#fisioterapia-pelvica" class="link-arrow">Fisioterapia pélvica <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                    </li>
+                    <li class="condition reveal">
+                        <span class="condition-icon"><svg class="icon" aria-hidden="true"><use href="#i-baby"/></svg></span>
+                        <h3>Recuperação pós-parto</h3>
+                        <p>Retomar a confiança no próprio corpo depois da gestação, cuidando do assoalho pélvico e da postura.</p>
+                        <a href="#saude-da-mulher" class="link-arrow">Saúde da mulher <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                    </li>
+                    <li class="condition reveal">
+                        <span class="condition-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+                        <h3>Dor na relação sexual</h3>
+                        <p>Dor, desconforto ou outras dificuldades na vida íntima, tratadas com respeito e sigilo.</p>
+                        <a href="#fisioterapia-pelvica" class="link-arrow">Fisioterapia pélvica <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                    </li>
+                    <li class="condition reveal">
+                        <span class="condition-icon"><svg class="icon" aria-hidden="true"><use href="#i-activity"/></svg></span>
+                        <h3>Sensação de peso na região íntima</h3>
+                        <p>Pressão, peso ou sensação de “bola” na vagina, que pode estar relacionada ao prolapso.</p>
+                        <a href="#fisioterapia-pelvica" class="link-arrow">Fisioterapia pélvica <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                    </li>
+                    <li class="condition reveal">
+                        <span class="condition-icon"><svg class="icon" aria-hidden="true"><use href="#i-flower-2"/></svg></span>
+                        <h3>Assoalho pélvico e postura</h3>
+                        <p>Vontade de fortalecer a musculatura pélvica e melhorar a postura e a flexibilidade.</p>
+                        <a href="#pilates-clinico" class="link-arrow">Pilates clínico <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                    </li>
+                    <li class="condition reveal">
+                        <span class="condition-icon"><svg class="icon" aria-hidden="true"><use href="#i-accessibility"/></svg></span>
+                        <h3>Dificuldade para se deslocar</h3>
+                        <p>No pós-parto ou com mobilidade reduzida, o atendimento pode acontecer na sua casa.</p>
+                        <a href="#atendimento-domiciliar" class="link-arrow">Atendimento domiciliar <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+                    </li>
+                </ul>
+
+                <p class="disclaimer">
+                    As informações deste site são educativas e não substituem uma avaliação individual.
+                    Só a avaliação permite indicar o tratamento adequado para o seu caso.
                 </p>
-                <!-- Botões de Ação -->
-                <div class="intro-buttons">
-                    <a href="https://wa.me/+5521976952733 " class="btn-primary btn-large" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Agende sua Consulta
+            </div>
+        </section>
+
+        <!-- ========== TRATAMENTOS ========== -->
+        <section class="section section-tint" id="tratamentos" aria-labelledby="tratamentos-title">
+            <div class="container">
+                <header class="section-head">
+                    <p class="eyebrow">Tratamentos</p>
+                    <h2 id="tratamentos-title" class="section-title">Cuidados oferecidos</h2>
+                    <p class="section-lead">Explicados de forma simples, para você saber o que esperar antes mesmo da primeira conversa.</p>
+                </header>
+
+                <div class="service-grid">
+                    <article class="service reveal" id="fisioterapia-pelvica">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart-pulse"/></svg></span>
+                        <h3>Fisioterapia Pélvica</h3>
+                        <p class="service-desc">Tratamento do assoalho pélvico, o conjunto de músculos que sustenta a bexiga, o útero e o intestino.</p>
+                        <dl class="service-facts">
+                            <div><dt>Para quem</dt><dd>Mulheres com incontinência urinária, prolapso ou disfunções sexuais.</dd></div>
+                            <div><dt>Objetivo</dt><dd>Melhorar o controle e a função do assoalho pélvico, trazendo mais conforto ao dia a dia.</dd></div>
+                        </dl>
+                        <a href="https://wa.me/5521976952733" class="btn btn-outline btn-sm" data-wa="Tenho interesse em Fisioterapia Pélvica." target="_blank" rel="noopener">Agendar avaliação</a>
+                    </article>
+
+                    <article class="service reveal" id="saude-da-mulher">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-hand-heart"/></svg></span>
+                        <h3>Saúde da Mulher</h3>
+                        <p class="service-desc">Acompanhamento fisioterapêutico nas diferentes fases da vida feminina.</p>
+                        <dl class="service-facts">
+                            <div><dt>Para quem</dt><dd>Mulheres que desejam cuidar da saúde pélvica e do bem-estar, inclusive no pós-parto.</dd></div>
+                            <div><dt>Objetivo</dt><dd>Promover bem-estar e qualidade de vida, respeitando o momento de cada mulher.</dd></div>
+                        </dl>
+                        <a href="https://wa.me/5521976952733" class="btn btn-outline btn-sm" data-wa="Tenho interesse em Saúde da Mulher." target="_blank" rel="noopener">Agendar avaliação</a>
+                    </article>
+
+                    <article class="service reveal" id="pilates-clinico">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-flower-2"/></svg></span>
+                        <h3>Pilates Clínico</h3>
+                        <p class="service-desc">Exercícios orientados pela fisioterapeuta e adaptados às suas necessidades.</p>
+                        <dl class="service-facts">
+                            <div><dt>Para quem</dt><dd>Quem busca fortalecer o assoalho pélvico e melhorar a postura e a flexibilidade.</dd></div>
+                            <div><dt>Objetivo</dt><dd>Fortalecimento muscular e postural, com movimentos seguros e acompanhados.</dd></div>
+                        </dl>
+                        <a href="https://wa.me/5521976952733" class="btn btn-outline btn-sm" data-wa="Tenho interesse em Pilates Clínico." target="_blank" rel="noopener">Agendar avaliação</a>
+                    </article>
+
+                    <article class="service reveal" id="atendimento-domiciliar">
+                        <span class="service-icon"><svg class="icon" aria-hidden="true"><use href="#i-house"/></svg></span>
+                        <h3>Atendimento Domiciliar</h3>
+                        <p class="service-desc">Consultas e tratamentos realizados no conforto da sua casa.</p>
+                        <dl class="service-facts">
+                            <div><dt>Para quem</dt><dd>Especialmente indicado no pós-parto ou para quem tem mobilidade reduzida.</dd></div>
+                            <div><dt>Objetivo</dt><dd>Tornar o tratamento possível sem que você precise se deslocar.</dd></div>
+                        </dl>
+                        <a href="https://wa.me/5521976952733" class="btn btn-outline btn-sm" data-wa="Tenho interesse em Atendimento Domiciliar." target="_blank" rel="noopener">Consultar disponibilidade</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SOBRE ========== -->
+        <section class="section" id="sobre" aria-labelledby="sobre-title">
+            <div class="container about">
+                <div class="about-card reveal">
+                    <picture>
+                        <source type="image/webp" srcset="img/logo-horizontal-azul-720.webp">
+                        <img src="img/logo-horizontal-azul-720.png" alt="Logo Bruna Baptista – Fisioterapia Pélvica" width="720" height="178" loading="lazy">
+                    </picture>
+                    <span class="about-card-meta">CREFITO 400581-F</span>
+                </div>
+                <!-- PREENCHER (recomendado): uma segunda foto real, por exemplo no ambiente de atendimento,
+                     pode substituir o cartão acima. Use <picture> como no hero. -->
+
+                <div class="about-text">
+                    <p class="eyebrow">Sobre mim</p>
+                    <h2 id="sobre-title" class="section-title">Prazer, eu sou a Bruna.</h2>
+                    <p>
+                        Sou fisioterapeuta formada pela Faculdade de Ciências Médicas e da Saúde (Suprema), em Juiz de Fora,
+                        e pós-graduada em Uroginecologia e Obstetrícia.
+                    </p>
+                    <p>
+                        Dedico meu trabalho à fisioterapia pélvica e à saúde da mulher, com tratamentos personalizados e humanizados.
+                        Sei que muitos desses assuntos ainda são cercados de constrangimento. Por isso, cada atendimento é conduzido
+                        com calma, respeito e privacidade.
+                    </p>
+                    <p>
+                        Meu objetivo é que você entenda o que acontece com o seu corpo e se sinta segura em cada etapa do tratamento.
+                    </p>
+                    <!-- PREENCHER (opcional): tempo de experiência e cursos complementares -->
+
+                    <ul class="credentials">
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-graduation-cap"/></svg> Graduação em Fisioterapia · Suprema, Juiz de Fora</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg> Pós-graduação em Uroginecologia e Obstetrícia</li>
+                        <li><svg class="icon" aria-hidden="true"><use href="#i-shield-check"/></svg> CREFITO 400581-F</li>
+                    </ul>
+
+                    <a href="https://wa.me/5521976952733" class="btn btn-primary" data-wa target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                        Conversar com a Bruna
                     </a>
-                    <a href="#servicos" class="btn-secondary btn-large">
-                        <i class="fas fa-arrow-down"></i> Conheça Nossos Serviços
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== DIFERENCIAIS ========== -->
+        <section class="section section-dark" aria-labelledby="diferenciais-title">
+            <div class="container">
+                <header class="section-head">
+                    <p class="eyebrow">O atendimento</p>
+                    <h2 id="diferenciais-title" class="section-title">O que você pode esperar</h2>
+                </header>
+                <ul class="feature-grid">
+                    <li class="feature reveal">
+                        <svg class="icon" aria-hidden="true"><use href="#i-message-circle-heart"/></svg>
+                        <h3>Escuta atenta e sigilo</h3>
+                        <p>Um espaço seguro para falar sobre temas íntimos, sem julgamentos.</p>
+                    </li>
+                    <li class="feature reveal">
+                        <svg class="icon" aria-hidden="true"><use href="#i-user-round"/></svg>
+                        <h3>Tratamento individualizado</h3>
+                        <p>O plano é construído a partir da sua avaliação, da sua rotina e dos seus objetivos.</p>
+                    </li>
+                    <li class="feature reveal">
+                        <svg class="icon" aria-hidden="true"><use href="#i-award"/></svg>
+                        <h3>Foco na saúde da mulher</h3>
+                        <p>Pós-graduação em Uroginecologia e Obstetrícia, dedicada à saúde pélvica feminina.</p>
+                    </li>
+                    <li class="feature reveal">
+                        <svg class="icon" aria-hidden="true"><use href="#i-house"/></svg>
+                        <h3>Atendimento em casa</h3>
+                        <p>Quando se deslocar é difícil, o cuidado pode ir até você.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== COMO FUNCIONA ========== -->
+        <section class="section" id="como-funciona" aria-labelledby="como-funciona-title">
+            <div class="container">
+                <header class="section-head">
+                    <p class="eyebrow">Passo a passo</p>
+                    <h2 id="como-funciona-title" class="section-title">Como funciona o atendimento</h2>
+                </header>
+                <ol class="steps">
+                    <li class="step reveal">
+                        <span class="step-num" aria-hidden="true">01</span>
+                        <h3>Agendamento</h3>
+                        <p>Você entra em contato pelo WhatsApp e escolhemos juntas o melhor horário.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num" aria-hidden="true">02</span>
+                        <h3>Avaliação</h3>
+                        <p>Conversamos sobre seu histórico, suas queixas e seus objetivos, e é feita a avaliação fisioterapêutica.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num" aria-hidden="true">03</span>
+                        <h3>Plano de tratamento</h3>
+                        <p>Definimos uma estratégia adequada ao seu caso, e tudo é explicado antes de começar.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num" aria-hidden="true">04</span>
+                        <h3>Acompanhamento</h3>
+                        <p>Sua evolução é acompanhada de perto ao longo das sessões.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num" aria-hidden="true">05</span>
+                        <h3>Reavaliação</h3>
+                        <p>Revisamos juntas os resultados e os próximos passos.</p>
+                    </li>
+                </ol>
+                <div class="section-cta">
+                    <a href="https://wa.me/5521976952733" class="btn btn-primary btn-lg" data-wa target="_blank" rel="noopener">
+                        <svg class="icon" aria-hidden="true"><use href="#i-calendar-check"/></svg>
+                        Dar o primeiro passo
                     </a>
                 </div>
             </div>
-            <!-- Imagem Destacada -->
-            <div class="intro-img">
-                <img src="logoGrandeAzul.png" alt="Fisioterapia Pélvica" class="intro-image">
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-   <section id="sobre" class="section-light">
-    <div class="container">
-        <h2 class="section-title">Sobre a Profissional</h2>
-        <div class="sobre-content">
-            <div class="sobre-img">
-                <img src="imagemBruna.jpeg" alt="Foto de Bruna Baptista">
-            </div>
-            <div class="sobre-texto">
-                <h3>Dra. Bruna Baptista</h3>
-                <p class="crefito">CREFITO: 400581-F</p>
-                <p>Com X anos de experiência na área de fisioterapia pélvica, dedico-me a proporcionar tratamentos personalizados e humanizados, visando sempre a recuperação completa e qualidade de vida das minhas pacientes.</p>
-                <div class="qualificacoes">
-                    <div class="qualificacao-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <p>Formada pela Faculdade de Ciências Médicas e da Saúde - Suprema Juiz de Fora</p>
-                    </div>
-                    <div class="qualificacao-item">
-                        <i class="fas fa-award"></i>
-                        <p>Pós-graduada em Uroginecologia e Obstetrícia</p>
-                    </div>
+        <!-- ========== DEPOIMENTOS ==========
+             Seção oculta até existirem depoimentos REAIS e autorizados.
+             Para ativar: remova o atributo "hidden", substitua os blocos de exemplo
+             e adicione <li><a href="#depoimentos">Depoimentos</a></li> no menu. -->
+        <section class="section section-tint" id="depoimentos" aria-labelledby="depoimentos-title" hidden>
+            <div class="container">
+                <header class="section-head">
+                    <p class="eyebrow">Depoimentos</p>
+                    <h2 id="depoimentos-title" class="section-title">Quem já foi atendida</h2>
+                </header>
+                <div class="testimonial-grid">
+                    <figure class="testimonial">
+                        <blockquote><p>PREENCHER: texto do depoimento real</p></blockquote>
+                        <figcaption>PREENCHER: primeiro nome (com autorização)</figcaption>
+                    </figure>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<section id="servicos" class="section-light">
-    <div class="container">
-        <h2 class="section-title">Nossos Serviços</h2>
-        <div class="servicos-grid">
-            <!-- Fisioterapia Pélvica -->
-            <div class="servico-card">
-                <div class="servico-icon">
-                    <i class="fas fa-heart-pulse"></i> <!-- Ícone atualizado -->
-                </div>
-                <h3>Fisioterapia Pélvica</h3>
-                <p>Tratamento especializado para incontinência urinária, disfunções sexuais e prolapso, com foco na recuperação completa da saúde íntima.</p>
-            </div>
+        </section>
 
-            <!-- Atendimento Domiciliar -->
-            <div class="servico-card">
-                <div class="servico-icon">
-                    <i class="fas fa-house-medical"></i> <!-- Ícone atualizado -->
-                </div>
-                <h3>Atendimento Domiciliar</h3>
-                <p>Consultas e tratamentos realizados no conforto do seu lar, especialmente indicado para pacientes em pós-parto ou com mobilidade reduzida.</p>
-            </div>
+        <!-- ========== FAQ ========== -->
+        <section class="section section-tint" id="duvidas" aria-labelledby="duvidas-title">
+            <div class="container faq-layout">
+                <header class="section-head section-head-left">
+                    <p class="eyebrow">Dúvidas frequentes</p>
+                    <h2 id="duvidas-title" class="section-title">Antes de marcar</h2>
+                    <p class="section-lead">Não encontrou sua dúvida? Pergunte pelo WhatsApp, sem compromisso.</p>
+                </header>
 
-            <!-- Saúde da Mulher -->
-            <div class="servico-card">
-                <div class="servico-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h3>Saúde da Mulher</h3>
-                <p>Acompanhamento integral para todas as fases da vida feminina, promovendo bem-estar e qualidade de vida.</p>
-            </div>
-
-            <!-- Pilates Clínico -->
-            <div class="servico-card">
-                <div class="servico-icon">
-                    <i class="fas fa-spa"></i>
-                </div>
-                <h3>Pilates Clínico</h3>
-                <p>Exercícios específicos para fortalecimento do assoalho pélvico e melhora da postura e flexibilidade.</p>
-            </div>
-        </div>
-    </div>
-</section>
-   <section id="beneficios" class="section-light">
-    <div class="container">
-        <h2 class="section-title">Benefícios do Tratamento</h2>
-        <div class="beneficios-content">
-            <div class="beneficios-lista">
-                <!-- Benefício 1: Fisioterapia Pélvica -->
-                <div class="beneficio-item">
-                    <i class="fas fa-check-circle"></i>
-                    <div>
-                        <h4>Melhora da Saúde Íntima</h4>
-                        <p>Tratamento especializado para disfunções como incontinência urinária e prolapso.</p>
-                    </div>
-                </div>
-
-                <!-- Benefício 2: Atendimento Domiciliar -->
-                <div class="beneficio-item">
-                    <i class="fas fa-check-circle"></i>
-                    <div>
-                        <h4>Conforto e Praticidade</h4>
-                        <p>Consultas e tratamentos realizados no conforto do seu lar, especialmente indicado para pacientes em pós-parto.</p>
-                    </div>
-                </div>
-
-                <!-- Benefício 3: Saúde da Mulher -->
-                <div class="beneficio-item">
-                    <i class="fas fa-check-circle"></i>
-                    <div>
-                        <h4>Acompanhamento Integral</h4>
-                        <p>Suporte personalizado para todas as fases da vida feminina, promovendo bem-estar e qualidade de vida.</p>
-                    </div>
-                </div>
-
-                <!-- Benefício 4: Pilates Clínico -->
-                <div class="beneficio-item">
-                    <i class="fas fa-check-circle"></i>
-                    <div>
-                        <h4>Fortalecimento Muscular e Postural</h4>
-                        <p>Exercícios específicos para fortalecer o assoalho pélvico e melhorar a postura e flexibilidade.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="beneficios-img">
-                <img src="logoGrandeAzul.png" alt="Benefícios da Fisioterapia">
-            </div>
-        </div>
-    </div>
-</section>
-    <!-- Contato -->
-    <section id="contato">
-        <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <div class="contato-content">
-                <div class="contato-info">
-                    <h3>Informações</h3>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Atendimentos em Juiz de Fora-MG</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <p>Telefone: (21) 97695-2733</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>Email: brubaptistafam@gmail.com</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <p>Horário: Seg-Sex: 8h-18h</p>
-                    </div>
-                    <a href="https://wa.me/+5521976952733" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> Fale pelo WhatsApp</a>
-                </div>
-                <div class="contato-form">
-                    <form id="form-contato">
-                        <div class="form-group">
-                            <input type="text" id="nome" placeholder="Seu nome" required>
+                <div class="faq">
+                    <details class="faq-item">
+                        <summary>Como faço para agendar?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>Pelo WhatsApp <a href="https://wa.me/5521976952733" data-wa target="_blank" rel="noopener">(21) 97695-2733</a> ou pelo formulário de contato desta página. Juntas, escolhemos o melhor dia e horário.</p>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Seu e-mail" required>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Como funciona a primeira avaliação?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>Começamos com uma conversa sobre seu histórico, suas queixas e o que você espera do tratamento. Em seguida é feita a avaliação fisioterapêutica e explico o plano proposto. Você pode tirar dúvidas a qualquer momento.</p>
+                            <!-- PREENCHER (opcional): duração da avaliação e o que levar (exames, laudos, roupa confortável etc.) -->
                         </div>
-                        <div class="form-group">
-                            <input type="tel" id="telefone" placeholder="Seu telefone">
+                    </details>
+                    <details class="faq-item">
+                        <summary>Tenho vergonha de falar sobre isso. É normal?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>Sim, e é muito comum. Queixas como perda de urina ou dor na relação sexual são mais frequentes do que se imagina. O atendimento é feito com respeito, sigilo e no seu tempo.</p>
                         </div>
-                        <div class="form-group">
-                            <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Onde são realizados os atendimentos?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>Os atendimentos são em Juiz de Fora – MG, com opção de atendimento domiciliar. Consulte pelo WhatsApp a disponibilidade para o seu bairro.</p>
+                            <!-- PREENCHER: se houver consultório, incluir endereço aqui -->
                         </div>
-                        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Qual é o horário de atendimento?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>De segunda a sexta-feira, das 8h às 18h.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>A fisioterapia é indicada para o meu caso?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
+                        <div class="faq-body">
+                            <p>Só uma avaliação individual pode responder com segurança. Se você se identificou com alguma das situações descritas neste site, entre em contato para conversarmos.</p>
+                        </div>
+                    </details>
+
+                    <!-- PREENCHER: perguntas que dependem de informações da profissional.
+                         Copie um bloco <details class="faq-item"> acima e preencha a resposta.
+                         - Preciso de encaminhamento médico?
+                         - Quanto tempo dura cada sessão?
+                         - Quais formas de pagamento são aceitas? / Atende convênio ou emite recibo para reembolso?
+                         - Qual o valor da avaliação?
+                    -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== LOCALIZAÇÃO + CONTATO ========== -->
+        <section class="section" id="contato" aria-labelledby="contato-title">
+            <div class="container contact">
+                <div class="contact-info">
+                    <p class="eyebrow">Contato</p>
+                    <h2 id="contato-title" class="section-title">Pronta para dar o próximo passo?</h2>
+                    <p class="section-lead">Mande uma mensagem e agende sua avaliação. Tiro suas dúvidas antes de marcar.</p>
+
+                    <ul class="info-list">
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>
+                            <div><strong>Onde atendo</strong><span>Juiz de Fora – MG, com opção de atendimento domiciliar</span></div>
+                            <!-- PREENCHER: endereço completo, bairro, ponto de referência, estacionamento e acessibilidade (se houver consultório) -->
+                        </li>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+                            <div><strong>Horário</strong><span>Segunda a sexta, das 8h às 18h</span></div>
+                        </li>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                            <div><strong>Telefone e WhatsApp</strong><a href="tel:+5521976952733">(21) 97695-2733</a></div>
+                        </li>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                            <div><strong>E-mail</strong><a href="mailto:brubaptistafam@gmail.com">brubaptistafam@gmail.com</a></div>
+                        </li>
+                        <li>
+                            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+                            <div><strong>Instagram</strong><a href="https://www.instagram.com/brubaptista.fisio" target="_blank" rel="noopener">@brubaptista.fisio</a></div>
+                        </li>
+                    </ul>
+
+                    <div class="btn-group">
+                        <a href="https://wa.me/5521976952733" class="btn btn-whatsapp btn-lg" data-wa target="_blank" rel="noopener">
+                            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                            Chamar no WhatsApp
+                        </a>
+                        <a href="tel:+5521976952733" class="btn btn-ghost btn-lg">
+                            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+                            Ligar
+                        </a>
+                    </div>
+
+                    <!-- PREENCHER: quando houver endereço fixo, incluir o mapa (carregamento sob demanda):
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps?q=ENDERECO+COMPLETO&output=embed" title="Mapa com a localização do consultório" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div> -->
+                </div>
+
+                <div class="contact-form-wrap">
+                    <form class="contact-form" id="form-contato" novalidate>
+                        <h3>Envie sua mensagem</h3>
+                        <p class="form-help">Ao enviar, o WhatsApp abre com sua mensagem pronta. Nenhum dado fica salvo neste site.</p>
+
+                        <div class="field">
+                            <label for="nome">Seu nome <span aria-hidden="true">*</span></label>
+                            <input type="text" id="nome" name="nome" autocomplete="given-name" required aria-describedby="nome-erro">
+                            <p class="field-error" id="nome-erro" hidden>Informe seu nome para continuar.</p>
+                        </div>
+
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="interesse">Interesse</label>
+                                <select id="interesse" name="interesse">
+                                    <option value="">Ainda não sei</option>
+                                    <option>Fisioterapia Pélvica</option>
+                                    <option>Saúde da Mulher</option>
+                                    <option>Pilates Clínico</option>
+                                    <option>Atendimento Domiciliar</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="periodo">Melhor período</label>
+                                <select id="periodo" name="periodo">
+                                    <option value="">Qualquer horário</option>
+                                    <option>Manhã</option>
+                                    <option>Tarde</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="mensagem">Mensagem <span class="optional">(opcional)</span></label>
+                            <textarea id="mensagem" name="mensagem" rows="4" aria-describedby="mensagem-dica"></textarea>
+                            <p class="field-hint" id="mensagem-dica">Não é preciso contar detalhes de saúde aqui. Conversamos com calma na avaliação.</p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                            Enviar pelo WhatsApp
+                        </button>
+                        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <img src="logoPequenaAzulFundoRemovido.png" alt="Imagem de um útero" class="footer-logo">
-                    <p>Cuidando da sua saúde íntima com tratamentos especializados e personalizados.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="img/logo-marca-rosa-112.png" alt="" width="115" height="112" loading="lazy">
+                    <p class="footer-name">Bruna Baptista</p>
+                    <p>Fisioterapeuta · Fisioterapia Pélvica e Saúde da Mulher</p>
+                    <p>CREFITO 400581-F</p>
                 </div>
-                <div class="footer-col">
-                    <h4>Links Rápidos</h4>
+
+                <nav class="footer-col" aria-label="Links do rodapé">
+                    <h2 class="footer-title">Navegação</h2>
                     <ul>
+                        <li><a href="#como-ajudo">Como ajudo</a></li>
+                        <li><a href="#tratamentos">Tratamentos</a></li>
                         <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#beneficios">Benefícios</a></li>
+                        <li><a href="#como-funciona">Como funciona</a></li>
+                        <li><a href="#duvidas">Dúvidas</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
-                </div>
+                </nav>
+
                 <div class="footer-col">
-                    <h4>Contato</h4>
-                    <p><i class="fas fa-phone-alt"></i> (21) 97695-2733</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/brubaptista.fisio" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/+5521976952733" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <h2 class="footer-title">Contato</h2>
+                    <ul>
+                        <li><a href="tel:+5521976952733">(21) 97695-2733</a></li>
+                        <li><a href="mailto:brubaptistafam@gmail.com">brubaptistafam@gmail.com</a></li>
+                        <li>Juiz de Fora – MG</li>
+                        <li>Seg. a sex., 8h às 18h</li>
+                    </ul>
+                    <div class="social">
+                        <a href="https://www.instagram.com/brubaptista.fisio" target="_blank" rel="noopener" aria-label="Instagram de Bruna Baptista (abre em nova aba)">
+                            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+                        </a>
+                        <a href="https://wa.me/5521976952733" data-wa target="_blank" rel="noopener" aria-label="WhatsApp de Bruna Baptista (abre em nova aba)">
+                            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Dra. Bruna Baptista - Fisioterapia Pélvica. Todos os direitos reservados.</p>
-                <p>CREFITO: 400581-F</p>
+                <p>&copy; <span id="current-year">2026</span> Bruna Baptista · Fisioterapia Pélvica. Todos os direitos reservados.</p>
+                <p><a href="privacidade.html">Política de privacidade</a></p>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
 
-    <!-- Botão Flutuante do WhatsApp -->
-<a href="https://wa.me/+5521976952733" target="_blank" class="whatsapp-float">
-    <i class="fab fa-whatsapp"></i> <!-- Ícone do WhatsApp (Font Awesome) -->
-</a>
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5521976952733" class="wa-float" id="wa-float" data-wa target="_blank" rel="noopener" aria-label="Agendar avaliação pelo WhatsApp (abre em nova aba)">
+        <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    </a>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
