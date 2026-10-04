@@ -884,6 +884,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
     overflow-wrap: anywhere;
 }
 
+.info-list span { display: block; }
+
 .info-list a {
     display: inline-block;
     padding-block: 10px;

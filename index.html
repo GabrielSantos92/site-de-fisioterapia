@@ -38,8 +38,7 @@
     <link rel="stylesheet" href="styles.css">
     <script>document.documentElement.classList.add('js');</script>
 
-    <!-- Dados estruturados (Schema.org) — somente informações confirmadas.
-         PREENCHER quando disponível: "address.streetAddress", "address.postalCode", "geo". -->
+    <!-- Dados estruturados (Schema.org) — somente informações confirmadas. -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -53,10 +52,13 @@
         "email": "brubaptistafam@gmail.com",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "R. Santo Antônio, 1340 – Centro",
             "addressLocality": "Juiz de Fora",
             "addressRegion": "MG",
+            "postalCode": "36016-211",
             "addressCountry": "BR"
         },
+        "geo": { "@type": "GeoCoordinates", "latitude": -21.7656101, "longitude": -43.3501771 },
         "areaServed": { "@type": "City", "name": "Juiz de Fora" },
         "openingHoursSpecification": [{
             "@type": "OpeningHoursSpecification",
@@ -546,7 +548,7 @@
                     <details class="faq-item">
                         <summary>Onde são realizados os atendimentos?<svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg></summary>
                         <div class="faq-body">
-                            <p>Os atendimentos são em Juiz de Fora – MG, presencialmente ou em domicílio. Pelo WhatsApp você recebe o endereço e consulta a disponibilidade de atendimento domiciliar para o seu bairro.</p>
+                            <p>Os atendimentos são em Juiz de Fora – MG, presencialmente na Liberi Fisioterapia Especializada (R. Santo Antônio, 1340 – Centro) ou em domicílio. Pelo WhatsApp você consulta a disponibilidade de atendimento domiciliar para o seu bairro.</p>
                             <!-- PREENCHER: endereço do consultório -->
                         </div>
                     </details>
@@ -585,8 +587,13 @@
                     <ul class="info-list">
                         <li>
                             <svg class="icon" aria-hidden="true"><use href="#i-map-pin"/></svg>
-                            <div><strong>Onde atendo</strong><span>Juiz de Fora – MG · atendimento presencial e domiciliar</span></div>
-                            <!-- PREENCHER: endereço do consultório, bairro, ponto de referência, estacionamento e acessibilidade -->
+                            <div>
+                                <strong>Onde atendo</strong>
+                                <span>Liberi Fisioterapia Especializada<br>R. Santo Antônio, 1340 – Centro, Juiz de Fora – MG, 36016-211</span>
+                                <span>Atendimento presencial e domiciliar</span>
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=Liberi+Fisioterapia+Especializada%2C+R.+Santo+Ant%C3%B4nio%2C+1340+-+Centro%2C+Juiz+de+Fora+-+MG" target="_blank" rel="noopener">Como chegar</a>
+                            </div>
+                            <!-- PREENCHER: ponto de referência, estacionamento e acessibilidade -->
                         </li>
                         <li>
                             <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
@@ -617,10 +624,9 @@
                         </a>
                     </div>
 
-                    <!-- PREENCHER: quando houver endereço fixo, incluir o mapa (carregamento sob demanda):
                     <div class="map">
-                        <iframe src="https://www.google.com/maps?q=ENDERECO+COMPLETO&output=embed" title="Mapa com a localização do consultório" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div> -->
+                        <iframe src="https://www.google.com/maps?q=Liberi+Fisioterapia+Especializada%2C+R.+Santo+Ant%C3%B4nio%2C+1340+-+Centro%2C+Juiz+de+Fora+-+MG&z=17&hl=pt-BR&output=embed" title="Mapa com a localização da clínica: R. Santo Antônio, 1340 – Centro, Juiz de Fora" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
                 </div>
 
                 <div class="contact-form-wrap">
