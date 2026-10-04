@@ -481,8 +481,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
     width: max-content;
     max-width: 92%;
     padding: 12px 22px;
-    background: var(--white);
-    border: 1px solid var(--line);
+    background: var(--navy);
+    border: 1px solid var(--navy);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     text-align: center;
@@ -493,13 +493,13 @@ button, input, select, textarea { font: inherit; color: inherit; }
     font-size: clamp(0.8rem, 3.9vw, 1.05rem);
     line-height: 1.7;
     white-space: nowrap;
-    color: var(--navy);
+    color: var(--on-dark);
 }
 
 .hero-badge-meta {
     margin-top: 8px;
     font-size: 0.78rem;
-    color: var(--muted);
+    color: var(--on-dark-muted);
 }
 
 /* ---------- Indicadores de confiança ---------- */
@@ -1152,9 +1152,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .article-container { max-width: 760px; }
 
 .article-head {
-    padding: 48px 0 36px;
+    padding: 48px 0 20px;
     background: var(--pink-soft);
-    margin-bottom: 40px;
+    margin-bottom: 24px;
 }
 
 .article-back {
@@ -1304,7 +1304,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
     .condition-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .post-grid { grid-template-columns: repeat(3, 1fr); }
 
-    .article-head { padding: 72px 0 48px; margin-bottom: 56px; }
+    .article-head { padding: 72px 0 28px; margin-bottom: 32px; }
     .article-cta { padding: 44px 40px; }
 
     .trust-list { grid-template-columns: repeat(4, 1fr); }
